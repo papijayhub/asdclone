@@ -27,3 +27,6 @@ Route::get('/home', [
 
 
 Route::resource('books', App\Http\Controllers\BookController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);
+

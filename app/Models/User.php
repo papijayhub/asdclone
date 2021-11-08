@@ -1,11 +1,13 @@
 <?php
-
+namespace App\Http\Controllers\API\UsersController;
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\API\UsersController;
 
 class User extends Authenticatable
 {

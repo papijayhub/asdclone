@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\BookControllerAPI;
+use App\Http\Controllers\API\UsersController;
 
 
 
@@ -22,4 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('books',[BookControllerAPI::class,'index']);
+Route::get('index',[BookController::class,'index']);
+Route::post('login',[UsersController::class,'login']);
+
+Route::post('register', [UsersController::class, 'register']);
+
+Route::post('reset-password', [UsersController::class, 'resetPassword']);
